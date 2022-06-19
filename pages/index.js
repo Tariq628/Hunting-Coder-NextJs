@@ -1,18 +1,18 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link'
-import Script from 'next/script'
-import Dummy from '../components/dummy'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
+
     <div className={styles.container}>
-      <Dummy/>
       <style jsx>
         {`
-        .mySpan{
-          color:red
+        h2{
+          font-size:38px
+        }
+        h3{
+          font-size:28px
         }
         `}
       </style>
@@ -22,26 +22,21 @@ export default function Home() {
         <meta name="keywords" content="nextjs, huntingcoder blog, hunting coder" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <nav className={styles.mainnav}>
-        <ul>
-          <Link href='/'><a><li>Home</li></a></Link>
-          <Link href='/about'><a><li>About</li></a></Link>
-          <Link href='/blog'><a><li>Blog</li></a></Link>
-          <Link href='/contact'><a><li>Contact</li></a></Link>
-        </ul>
-      </nav>
+
       {/* <Script src="./se.js" strategy='lazyOnload'></Script> */}
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-        <span className="mySpan dummy">Hunting Coder</span>
+          <span className="">Hunting Coder</span>
         </h1>
-
+        <div className={styles.imgWrap}>
+          <Image className={styles.myImg} src="/homeimg.jpg" width={237} height={158} />
+        </div>
         <p className={styles.description}>
           A blog for the coders by a coder
         </p>
-        <div className="blogs">
-          <h2>Popular Blogs</h2>
+        <div className={styles.container}>
+          <h2>Latest Blogs</h2>
           <div className="blogitem">
             <h3>How to learn javascript in 2022</h3>
             <p>Javascript is the language used to design the logic for the web</p>
@@ -58,16 +53,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+
       </footer>
     </div>
   )

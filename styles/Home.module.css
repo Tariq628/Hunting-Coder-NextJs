@@ -2,6 +2,14 @@
   padding: 0 2rem;
 }
 
+.imgWrap {
+  padding-top: 10px;
+}
+
+.myImg {
+  border-radius: 10px;
+}
+
 .main {
   min-height: 100vh;
   padding: 2rem 0;
@@ -51,7 +59,7 @@
 }
 
 .description {
-  margin: 4rem 0;
+  /* margin: 4rem 0; */
   line-height: 1.5;
   font-size: 1.5rem;
 }
@@ -115,12 +123,13 @@
   }
 }
 
-.mainnav ul{
+.mainnav ul {
   display: flex;
   justify-content: center;
   margin-top: 50px;
 }
-.mainnav ul li{
+
+.mainnav ul li {
   margin: 0 23px;
   list-style: none;
   font-weight: bold;
